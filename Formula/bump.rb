@@ -5,21 +5,21 @@
 class Bump < Formula
   desc "Bump semver git tag in yours repository"
   homepage "https://bump.flaticols.dev"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/flaticols/bump/releases/download/v0.0.3/bump_Darwin_x86_64.tar.gz"
-      sha256 "4a529208ee42e39dec120a8640496a8835db5cbdb684f3d95399d18738278cff"
+      url "https://github.com/flaticols/bump/releases/download/v0.0.4/bump_Darwin_x86_64.tar.gz"
+      sha256 "4403a0ffed4f7d634e438fbad145618d77859a0064ebcfb709f5c84a5f4185ba"
 
       def install
         bin.install "bump"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/flaticols/bump/releases/download/v0.0.3/bump_Darwin_arm64.tar.gz"
-      sha256 "f2e2df7bc6aab8c841fe1fdeaeea7139ad72e064e7faf1cf6f3ffdf479e63993"
+      url "https://github.com/flaticols/bump/releases/download/v0.0.4/bump_Darwin_arm64.tar.gz"
+      sha256 "975afadf659ac1c0334c6cbdd4ec1a5c617aa56c78db528772d3e9d0bec5614c"
 
       def install
         bin.install "bump"
@@ -30,8 +30,8 @@ class Bump < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/flaticols/bump/releases/download/v0.0.3/bump_Linux_x86_64.tar.gz"
-        sha256 "521a28d6ecfa0cae89564a0f0b560881e45876244907dc0ed91477a085dfb5d0"
+        url "https://github.com/flaticols/bump/releases/download/v0.0.4/bump_Linux_x86_64.tar.gz"
+        sha256 "87808e0abe75a4baedfafce0f4fcac50997f0f701deaffb4fd766e3ab9e33035"
 
         def install
           bin.install "bump"
@@ -40,8 +40,8 @@ class Bump < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/flaticols/bump/releases/download/v0.0.3/bump_Linux_arm64.tar.gz"
-        sha256 "5569e3d5db922fde3de14608a20a3271d2424c3cd4adf72b0fa3a7ab5d2f974e"
+        url "https://github.com/flaticols/bump/releases/download/v0.0.4/bump_Linux_arm64.tar.gz"
+        sha256 "64587cf0db5aa022e4271c34ea293554a6ac2e3e72284ac332b1e68b15b5fefc"
 
         def install
           bin.install "bump"
