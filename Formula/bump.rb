@@ -5,21 +5,21 @@
 class Bump < Formula
   desc "Bump semver git tag in yours repository"
   homepage "https://bump.flaticols.dev"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/flaticols/bump/releases/download/v0.0.7/bump_Darwin_x86_64.tar.gz"
-      sha256 "3db7c6fc77722ac4019a277292e9af385fa232094fbe8b70b401133946a314ba"
+      url "https://github.com/flaticols/bump/releases/download/v0.0.8/bump_Darwin_x86_64.tar.gz"
+      sha256 "fca7045c9b5519fbf73e52e2754ced86d37f98bbf86bee050648e7b7d71587a8"
 
       def install
         bin.install "bump"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/flaticols/bump/releases/download/v0.0.7/bump_Darwin_arm64.tar.gz"
-      sha256 "770e1cf798d5827a73ec20cd7a13fc626b0382a7220930d692479c7721979aa3"
+      url "https://github.com/flaticols/bump/releases/download/v0.0.8/bump_Darwin_arm64.tar.gz"
+      sha256 "e5f30d0b25ec279c51d2cf9478851078cb80c7eb166205d4f2f4f94fcaff2a81"
 
       def install
         bin.install "bump"
@@ -28,24 +28,18 @@ class Bump < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/flaticols/bump/releases/download/v0.0.7/bump_Linux_x86_64.tar.gz"
-        sha256 "a0810eb0d173ac97956ed453b31e622ae7173f0a33ab44c009a7d68b9e0ba0e3"
-
-        def install
-          bin.install "bump"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/flaticols/bump/releases/download/v0.0.8/bump_Linux_x86_64.tar.gz"
+      sha256 "e434f995ee0697876da205698d2f46754d630a5a01dfd2641d6e1edc5674acdf"
+      def install
+        bin.install "bump"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/flaticols/bump/releases/download/v0.0.7/bump_Linux_arm64.tar.gz"
-        sha256 "7ceaf69df3ee5ad21e80e5649ba84ccafecc760136be8d36e47c23ccb1b51396"
-
-        def install
-          bin.install "bump"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/flaticols/bump/releases/download/v0.0.8/bump_Linux_arm64.tar.gz"
+      sha256 "b5f29fc7c04f3fa132afd659a5bc0aed90fff4c6a4da05163f95625e6c84194d"
+      def install
+        bin.install "bump"
       end
     end
   end
