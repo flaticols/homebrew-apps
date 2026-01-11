@@ -5,21 +5,21 @@
 class Positionless < Formula
   desc "A Go static analyzer that detects positional struct literal initialization and suggests converting them to named field initialization for better code maintainability."
   homepage ""
-  version "2"
+  version "2.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/flaticols/positionless/releases/download/v2/positionless_Darwin_x86_64.tar.gz"
-      sha256 "cd4535f9853c514dd697844e8238b4cb328fc770096e3ce1ec2a9e089d714226"
+      url "https://github.com/flaticols/positionless/releases/download/v2.1.0/positionless_Darwin_x86_64.tar.gz"
+      sha256 "d1fea55424483ea4a0f20013f1f0123d0e0145cc98789bced152ee970d42766c"
 
       def install
         bin.install "positionless"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/flaticols/positionless/releases/download/v2/positionless_Darwin_arm64.tar.gz"
-      sha256 "9a64e69ba902dc43dd083a2df2b33c5f103c8e0a4ca43659efa092465a1238d4"
+      url "https://github.com/flaticols/positionless/releases/download/v2.1.0/positionless_Darwin_arm64.tar.gz"
+      sha256 "6c359b259a8a010994400af95ecabd1554a1fdd95a97cf80dd7f3226ae8047e4"
 
       def install
         bin.install "positionless"
@@ -28,16 +28,16 @@ class Positionless < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/flaticols/positionless/releases/download/v2/positionless_Linux_x86_64.tar.gz"
-      sha256 "b9b24e693a18edf95389b28b26fe4fdb196da6f7d52f324a2bc5d46e1d48c586"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/flaticols/positionless/releases/download/v2.1.0/positionless_Linux_x86_64.tar.gz"
+      sha256 "7982378a6218858b2e046b3b62a311aaac4bff98be905c0372d2f44a9bfe7eef"
       def install
         bin.install "positionless"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/flaticols/positionless/releases/download/v2/positionless_Linux_arm64.tar.gz"
-      sha256 "aad87154b2deefade435f31f98aa4f8e3868cf45212cfdd2ad10f8bded70b701"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/flaticols/positionless/releases/download/v2.1.0/positionless_Linux_arm64.tar.gz"
+      sha256 "405ce6dff964d453867971096294e8e3e2f8437c488eb0c5cd97c417b2fe8b97"
       def install
         bin.install "positionless"
       end
