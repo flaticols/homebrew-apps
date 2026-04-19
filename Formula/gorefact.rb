@@ -5,21 +5,21 @@
 class Gorefact < Formula
   desc "Go call-graph explorer with dependency rule checks and a Neovim UI"
   homepage "https://github.com/flaticols/gorefactor"
-  version "0.0.10"
+  version "0.0.11"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/flaticols/gorefactor/releases/download/v0.0.10/gorefact_Darwin_x86_64.tar.gz"
-    sha256 "a3ce94ba35ae1fe5941cd405185c7d3417e35ef8322631caa4290cdd73c81bc1"
+    url "https://github.com/flaticols/gorefactor/releases/download/v0.0.11/gorefact_Darwin_x86_64.tar.gz"
+    sha256 "708dcaf6cb65fd7d872c156d5cb3334fdec0aceb3d4fc320b98ab73607c32ca3"
 
     define_method(:install) do
       bin.install "gorefact"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/flaticols/gorefactor/releases/download/v0.0.10/gorefact_Darwin_arm64.tar.gz"
-    sha256 "62a985368a5ca1baef4612da281252b3fa6880369ce053d56c8db0e017a96207"
+    url "https://github.com/flaticols/gorefactor/releases/download/v0.0.11/gorefact_Darwin_arm64.tar.gz"
+    sha256 "10cef1dac94a20cf11bfa8222a22f4d342428f893aed083b6a30d2423fe9e853"
 
     define_method(:install) do
       bin.install "gorefact"
